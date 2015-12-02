@@ -1,0 +1,91 @@
+#%RAML 0.8
+---
+title: "Muse: Mule Sales Enablement API"
+version: v1
+schemas:
+  - presentation: |
+      {  "$schema": "http://json-schema.org/draft-03/schema",
+         "type": "object",
+         "description": "A single product Presentation",
+         "properties": {
+           "id":  { "type": "string", "required": true },
+           "title":  { "type": "string", "required": true },
+           "description":  { "type": "string" },
+           "fileUrl":  { "type": "string", "required": true },
+           "productId":  { "type": "string", "required": true }
+         }
+      }
+  - presentations: |
+      {  "$schema": "http://json-schema.org/draft-03/schema",
+         "type": "object",
+         "description": "A collection of product Presentations",
+         "properties": {
+           "size":  { "type": "integer", "required": true },
+           "presentations":  {
+              "type": "array",
+              "items": { "$ref": "presentation" }
+           }
+         }
+      }
+  - product: |
+      {  "$schema": "http://json-schema.org/draft-03/schema",
+         "type": "object",
+         "description": "A single Product",
+         "properties": {
+           "id":  { "type": "string", "required": true },
+           "name":  { "type": "string", "required": true },
+           "description":  { "type": "string" },
+           "imageUrl":  { "type": "string" },
+           "region": { "type": "string", "required": true }
+         }
+      }
+  - products: |
+      {  "$schema": "http://json-schema.org/draft-03/schema",
+         "type": "object",
+         "description": "A collection of Products",
+         "properties": {
+           "size":  { "type": "integer", "required": true },
+           "products":  {
+              "type": "array",
+              "items": { "$ref": "product" }
+           }
+         }
+      }
+/presentations: &presentations
+  get:
+    queryParameters:
+      title:
+        type: string
+        displayName: title
+        description: Filter by title
+    responses:
+      200:
+        body:
+          application/json:
+            schema: presentations
+  /{presentationId}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              schema: presentation
+/products:
+  get:
+    queryParameters:
+      region:
+        type: string
+        displayName: region
+        description: Filter by region
+  post:
+    body:
+      application/json:
+        schema: product
+  /{productId}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              schema: product
+    /presentations: *presentations
