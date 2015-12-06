@@ -10,6 +10,15 @@
   "license": "ISC",
   "devDependencies": {
     "api-designer": "0.0.6",
+    "raml-server": "^0.1.5",
     "raml2html": "^2.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keik/raml-exercise-with-jax-rs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/keik/raml-exercise-with-jax-rs/issues"
+  },
+  "homepage": "https://github.com/keik/raml-exercise-with-jax-rs#readme"
 }
