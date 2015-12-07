@@ -28,5 +28,35 @@ Then the application is deployed to http://localhost:8080/raml_exercise .
 Undeploy the Archive
 
 ```
-mvn wildfly:undeploy
+% mvn wildfly:undeploy
 ```
+
+
+## TIPS
+
+To output model classes with Bean Validation annotated by [raml-to-jax-rs](https://github.com/mulesoft/raml-for-jax-rs) v1.3.3, We have to do following two points:
+
+* Enable raml-to-jax-rs option `useJsr303Annotations`.
+* To output `@NotNull` to model classes, `required` property must be specified in schema definations such like:
+
+  ```
+  "properties": {
+    "id": {
+      "type": "integer",
+      "required": true
+    }
+  }
+  ```
+
+  As notes, but following example would **not** output `@NotNull`:
+
+  ```
+  "properties": {
+    "id": {
+      "type": "integer",
+    },
+  },
+  "required": [
+    "id"
+  ]
+  ```

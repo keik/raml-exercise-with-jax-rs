@@ -6,10 +6,54 @@ schemas:
   - user: !include user.json
 /users:
   get:
+    responses:
+      200:
+        body:
+          application/json:
+            schema: |
+                {
+                  "$schema": "http://json-schema.org/draft-04/schema#",
+                  "title": "Users",
+                  "type": "array",
+                  "items": {
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "title": "User",
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "description": "The unique identifier for a user",
+                        "type": "integer",
+                        "required": true
+                      },
+                      "name": {
+                        "description": "The user name",
+                        "type": "string",
+                        "name"
+                      }
+                    }
+                  }
+                }
   /{userId}:
     get:
       responses:
         200:
           body:
             application/json:
-              schema: user
+              schema: |
+                {
+                  "$schema": "http://json-schema.org/draft-04/schema#",
+                  "title": "User",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "description": "The unique identifier for a user",
+                      "type": "integer",
+                      "id",
+                    },
+                    "name": {
+                      "description": "The user name",
+                      "type": "string",
+                      "name"
+                    }
+                  }
+                }

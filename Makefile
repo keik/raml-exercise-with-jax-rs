@@ -10,7 +10,8 @@ api-editor: node_modules
 	@node_modules/.bin/api-designer
 
 api-gen: $(wildcard $(RAML_DIR)/*)
-	@mkdir -p $(GEN_API_DIR) && \
+	@rm -rf $(GEN_API_DIR) && \
+  mkdir -p $(GEN_API_DIR) && \
   java -cp raml-to-jax-rs.jar org.raml.jaxrs.codegen.core.Launcher \
   -basePackageName $(PACKAGE) \
   -outputDirectory $(GEN_API_DIR) \
