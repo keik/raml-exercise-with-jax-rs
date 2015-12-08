@@ -5,15 +5,13 @@
   "properties": {
     "id": {
       "description": "The unique identifier for a user",
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "name": {
       "description": "The user name",
-      "type": "string"
+      "type": "string",
+      "required": true
     }
-  },
-  "required": [
-    "id",
-    "name"
-  ]
+  }
 }

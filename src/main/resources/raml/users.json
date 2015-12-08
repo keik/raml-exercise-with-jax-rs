@@ -1,19 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "User",
-  "type": "object",
-  "properties": {
-    "id": {
-      "description": "The unique identifier for a user",
-      "type": "integer"
-    },
-    "name": {
-      "description": "The user name",
-      "type": "string"
+  "type": "array",
+  "items": {
+    "$ref": "user"
     }
-  },
-  "required": [
-    "id",
-    "name"
-  ]
+  }
 }

@@ -1,13 +1,12 @@
 {
   "name": "raml_exercise",
-  "version": "1.0.0",
-  "description": "helloworld-rs: Helloworld Using JAX-RS (Java API for RESTful Web Services) ========================================================================== Author: Gustavo A. Brey, Gaston Coco   Level: Intermediate   Technologies: CDI, JAX-RS   Summary: The `helloworld-rs` quickstart demonstrates a simple Hello World application, bundled and deployed as a WAR, that uses *JAX-RS* to say Hello.     Target Product: JBoss EAP   Source: <https://github.com/jboss-developer/jboss-eap-quickstarts/>",
-  "main": "index.js",
+  "version": "0.0.0",
+  "description": "see README.md",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "readme": "echo 'see Makefile'"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "keik <k4t0.kei@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "api-designer": "0.0.6",
     "raml-server": "^0.1.5",
@@ -20,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/keik/raml-exercise-with-jax-rs/issues"
   },
-  "homepage": "https://github.com/keik/raml-exercise-with-jax-rs#readme"
+  "homepage": "https://github.com/keik/raml-exercise-with-jax-rs#readme",
+  "private": true
 }

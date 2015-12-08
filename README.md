@@ -34,10 +34,10 @@ Undeploy the Archive
 
 ## TIPS
 
-To output model classes with Bean Validation annotated by [raml-to-jax-rs](https://github.com/mulesoft/raml-for-jax-rs) v1.3.3, We have to do following two points:
+To output model classes with Bean Validation annotated by [raml-to-jax-rs](https://github.com/mulesoft/raml-for-jax-rs) v1.3.3, we have to do following two points:
 
 * Enable raml-to-jax-rs option `useJsr303Annotations`.
-* To output `@NotNull` to model classes, `required` property must be specified in schema definations such like:
+* To output `@NotNull` annotations to model classes, `required` property must be specified in schema definations such like:
 
   ```
   "properties": {
@@ -48,7 +48,7 @@ To output model classes with Bean Validation annotated by [raml-to-jax-rs](https
   }
   ```
 
-  As notes, but following example would **not** output `@NotNull`:
+  As notes, but the following example would **not** output `@NotNull` annotations:
 
   ```
   "properties": {
