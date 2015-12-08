@@ -24,6 +24,11 @@ Build and Deploy
 
 Then the application is deployed to http://localhost:8080/raml_exercise .
 
+Example RESTful API endpoints are:
+
+* http://localhost:8080/raml_exercise/rest/users
+
+* http://localhost:8080/raml_exercise/rest/users
 
 Undeploy the Archive
 

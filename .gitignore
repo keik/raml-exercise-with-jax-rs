@@ -3,6 +3,7 @@ npm-debug.log
 
 src/gen
 target
+doc
 
 .settings
 .project

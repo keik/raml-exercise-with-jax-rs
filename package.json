@@ -9,6 +9,7 @@
   "license": "MIT",
   "devDependencies": {
     "api-designer": "0.0.6",
+    "jsonlint": "^1.6.2",
     "raml-server": "^0.1.5",
     "raml2html": "^2.1.2"
   },

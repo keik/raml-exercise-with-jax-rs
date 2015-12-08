@@ -1,13 +1,13 @@
 #%RAML 0.8
 ---
-title: "Muse: Mule Sales Enablement API"
+title: "RAML exercise with JAX-RS"
 version: v1
 schemas:
-#  - user: !include user.json
   - user: !include user.json
   - users: !include users.json
 /users:
   get:
+    description: Retrieve all users
     responses:
       200:
         body:
@@ -15,6 +15,7 @@ schemas:
             schema: users
   /{userId}:
     get:
+      description: Retrieve a user which has specified ID
       responses:
         200:
           body:
